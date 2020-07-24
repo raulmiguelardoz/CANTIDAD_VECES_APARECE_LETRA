@@ -1,0 +1,10 @@
+import numpy as np
+texto=list(input("Inserte cadena: "))
+contador_elementos=np.unique(texto,return_counts=True)
+Dict={}
+j=0
+for i in contador_elementos[0]:
+	Dict[i]=contador_elementos[1][j]
+	j=j+1
+for val in Dict:
+	print("{}-{}".format(val,Dict[val]))
